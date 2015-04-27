@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Success Confirmation</title>
+    <meta charset="utf-8">
+    <!--
+                               Page Specific Stylesheets
+    -->
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/styles.css') }}">
+    <!--
+                                  Templar Stylesheets
+    -->
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/templar.css') }}">
+    <!--
+                                      Font Styles
+    -->
+    <!--Name: "Lato" src=http://www.google.com/fonts#QuickUsePlace:quickUse/Family:Lato:400,300,100,700,900-->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <!--
+                                  Full size Navigation
+    -->
+    <div class="row" id="nav">
+        <nav>
+            <ul>
+                <li><a href="/">ALL ITEMS</a></li>
+                <li><a href="/logoutaction">LOGOUT</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!--
+                                        Wrapper 90%
+    -->
+    <div class="wrapper">
+
+        <!--
+                                        Form Header
+        -->
+        <div class="row">
+            <div class="twelve columns">
+                <div class="row">
+                    <h1>Item added</h1>
+                </div>
+                <div class="row">
+                    <p><span style="color:red">{{pagedata}}</span> <a href="/item/{{session['itemName']}}">ITEM DETAILS</a></p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--
+                                          Add Item Form
+        -->
+        <div class="row">
+           <
+        </div>
+   </div>
+</body>
+</html>

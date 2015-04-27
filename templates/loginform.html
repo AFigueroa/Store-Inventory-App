@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Log in</title>
+    <meta charset="utf-8">
+    <!--
+                               Page Specific Stylesheets
+    -->
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/styles.css') }}">
+    <!--
+                                  Templar Stylesheets
+    -->
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/templar.css') }}">
+    <!--
+                                      Font Styles
+    -->
+    <!--Name: "Lato" src=http://www.google.com/fonts#QuickUsePlace:quickUse/Family:Lato:400,300,100,700,900-->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <!--
+                                  Full size Navigation
+    -->
+    <div class="row" id="nav">
+        <nav>
+            <ul>
+                <li><a href="/">ALL ITEMS</a></li>
+                <li></li>
+            </ul>
+        </nav>
+    </div>
+    <!--
+                                        Wrapper 90%
+    -->
+    <div class="wrapper">
+
+        <!--
+                                        Form Header
+        -->
+        <div class="row">
+            <div class="twelve columns">
+                <h1>LOGIN</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="twelve columns">
+                <p>{{pagedata}}</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <form class="six columns templar_form" action="/loginaction" method="post">
+
+                <!-- NAME -->
+                <div class="row">
+                <label class="clear_both one columns" for="username">Username:</label>
+                <input type="text" name="username" />
+                </div>
+
+
+                <!-- COLOR -->
+                <div class="row">
+                <label class="clear_both one columns" for="password">Password:</label>
+                <input type="password" name="password"/>
+                </div>
+                <!-- SUBMIT -->
+                <div class="row">
+                   <div class="four columns">
+                <input  style="float:right" type="submit" name="submit"/>
+                </div>
+                </div>
+            </form>
+        </div>
+   </div>
+</body>
+</html>

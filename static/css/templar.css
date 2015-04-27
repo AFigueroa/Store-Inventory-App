@@ -1,0 +1,503 @@
+/*                   Metadata               */
+/*              Project Details             */
+/*
+  -------------------------------------------
+    Date: January 25, 2014
+
+    Created by: Antonio Figueroa
+    Email: figueroawebdesigns@gmail.com
+    Phone: 787-209-1421
+
+    Project Name: Templar v1.2
+    Client Name: Self
+    Email: n/a
+    Phone: n/a
+    -------------------------------------------
+*/
+
+/*              Basic Styling                */
+/*===========================================*/
+
+/*-----------------Global--------------------*/
+/*-------------------------------------------*/
+*{
+    margin:0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+body{
+    font-size: 10px;
+}
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    padding: 25px 0;
+}
+.row .column *, .row .columns *{
+    padding: 0 0.83333rem;
+}
+h1, h2, h3, h4, h5, h6, p, a, li,label, input, textarea, table{
+    font-family: 'Lato', sans-serif;
+}
+input, textarea{
+    font-size: 1.3em;
+}
+h1, h2, h3, h4, h5, h6{
+    text-transform: capitalize;
+    margin-top: 10px;
+}
+p{
+    margin-top: 5px;
+}
+img{
+    max-width: 100%;
+    width: 95.446585%;
+}
+.radiusStart{
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.radiusFinish{
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.clear_both{
+    clear:both;
+}
+/*-------------------------------------------*/
+
+/*----------------Navigation-----------------*/
+/*-------------------------------------------*/
+nav ul li{
+    float:left;
+    text-align: center;
+    width: 8.3333%;          /* Li width: four columns */
+    height: 45px;
+    min-width: 121px;
+    min-height: 45px;
+    line-height: 45px;
+    font-size: 1.2em;
+}
+nav ul li:last-of-type{
+    float: right;
+    padding-right: 5.25%;
+}
+nav ul li a p{
+    margin-top: 0;
+    text-align: center;
+    text-transform: uppercase;
+    height: inherit;
+}
+
+/*Sub Nav*/
+nav ul.subNav li:last-of-type{
+    padding: 0;
+    float: none;
+}
+nav ul.subNav li a p{
+    font-size: .75em;
+}
+nav ul{
+    margin-left: 5%;
+}
+.subNav{
+    position:absolute;
+    top:60px;
+    left: 121px;
+    z-index: 1;
+    display: none;
+}
+nav ul li:hover .subNav{
+    display: block;
+}
+.subNav li{
+    width: 121px;
+    clear: both;
+}
+/*-------------------------------------------*/
+
+/*------------------Fonts--------------------*/
+/*-------------------------------------------*/
+h1{
+    font-size: 3.2em; /*32px*/
+}
+h2{
+    font-size: 2.6em; /*20px*/
+}
+h3{
+    font-size: 2.2em; /*16px*/
+}
+h4{
+    font-size: 1.8em; /*14px*/
+}
+h5{
+    font-size: 1.6em; /*13px*/
+}
+h6{
+    font-size: 1.4em; /*12px*/
+}
+p{
+    font-size: 1.3em; /*26px*/
+}
+a{
+    font-size: 1.3em; /*26px*/
+}
+/*-------------------------------------------*/
+
+/*--------------------Rows-------------------*/
+/*-------------------------------------------*/
+.row{
+    clear:both;
+    width: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+}
+.row .row {
+    width: auto;
+    max-width: none;
+}
+.row h1{
+    margin-top: 0;
+}
+.secondRow{
+    overflow: hidden;
+}
+div.row div.four.columns img.secondRow{
+    padding-top: 30px;
+}
+.rowRadiusStart{
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.rowRadiusFinish{
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+/*-------------------------------------------*/
+
+/*------------------Columns------------------*/
+/*-------------------------------------------*/
+.one{
+    width: 8.3333%;
+}
+.two{
+    width: 16.6667%;
+}
+.three{
+    width: 25%;
+}
+.four{
+    width: 33.3333%;
+}
+.five{
+    width: 41.6667%;
+}
+.six{
+    width: 50%;
+}
+.seven{
+    width: 58.3333%;
+}
+.eight{
+    width: 66.6667%;
+}
+.nine{
+    width: 75%;
+}
+.ten{
+    width: 83.3333%;
+}
+.eleven{
+    width: 91.6667%;
+}
+.twelve{
+     width: 100%;
+ }
+.column, .columns{
+    position: relative;
+    float: left;
+    min-height: 35px;
+    display: block;
+}
+/*------------------------------------------*/
+/*=======================================================================*/
+
+/*====================================Page content==================================*/ /*Version 1.3 coming soon*/
+/*Buttons*/
+button{
+    border-radius: 3px;
+    width: 100%;
+    font-size: 1.6em;
+    text-transform: uppercase;
+}
+/*-----------------Images-------------------*/
+img.fullsize{
+    width:92.6576%;
+    padding-top: 0;
+}
+img{
+    width: inherit;
+}
+/*------------------------------------------*/
+/*-----------------Tables-------------------*/
+table{
+    width: 100%;
+}
+tr{
+    clear:both;
+    width: auto;
+    margin: 25px auto;
+    overflow: hidden;
+    text-align: center;
+}
+.wrapper .row .four td{
+    padding: 35px 0;
+}
+td{
+    font-size: 2.2em;
+}
+th{
+    font-weight: 800;
+    font-size: 2.4em;
+}
+/*------------------------------------------*/
+/*-----------------Forms--------------------*/
+label{
+    font-size: 1.6em;
+    text-align: right
+}
+
+label, input{
+    margin: 15px 0 ;
+}
+
+#captcha{
+    padding-left:10.7%;
+    width:150px;
+}
+
+/*------------------------------------------*/
+/*-----------------Captcha--------------------*/
+
+#captcha-img{
+    margin-left:37%;
+}
+
+/*------------------------------------------*/
+/*Videos*/
+source{
+    max-width:100%;
+    width: 97.89%;
+}
+/*==================================================================================*/
+
+/*======================================Animations==================================*/
+/*Transition: Opacity (on hover: show)*/
+/*------------------------------------*/
+.transition_opacity{
+    position: absolute;
+    right: 0;
+    left:0;
+    top: 0;
+    bottom: 1200px;
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: opacity 1s ease 0s;
+    -moz-transition: opacity 1s ease 0s;
+    -ms-transition: opacity 1s ease 0s;
+    -o-transition: opacity 1s ease 0s;
+    transition: opacity 1s ease 0s;
+}
+.transition_opacity:hover{
+    opacity: 1;
+}
+/*------------------------------------*/
+/*Transform: Font Size (enlarge)*/
+.transform_scale{
+    -webkit-transition: all 1s ease 0s;
+    -moz-transition: all 1s ease 0s;
+    -o-transition: all 1s ease 0s;
+    -ms-transition: scale 1s ease 0s;
+    transition: scale 1s ease 0s;
+}
+.transform_scale:hover{
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+/*-------------------------------------------*/
+/*==================================================================================*/
+
+/*===================================Media Queries==================================*/
+/*==================================================================================*/
+
+/* Tablet Portrait size to standards 960px (devices and browsers) */
+@media screen and (min-width: 768px) and (max-width: 1224px){
+    .templar_form{
+        width: 100%;
+    }
+    button{
+        font-size: 1em;
+    }
+    p>a{
+        font-size: 1.5em;
+    }
+}
+/*------------------------------------------------------------------*/
+
+/* Mobile Landscape to tablet portrait (devices and browsers) */
+@media screen and (min-width: 480px) and (max-width: 767px){
+    div#nav{
+        width:90%;
+    }
+    button{
+        font-size: .80em;
+    }
+    nav ul{
+        margin: 0;
+    }
+    nav ul li{
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+    nav ul li:last-of-type{
+        margin: 0;
+        padding-right: 0;
+    }
+    nav ul li a{
+        width: 100%;
+        text-align: center;
+        min-height: 45px;
+        line-height: 45px;
+    }
+    nav ul li a p{
+        width: 100%;
+        text-align: center;
+        min-height: 45px;
+        line-height: 45px;
+        padding: 0;
+    }
+    .templar_form{
+        width: 100%;
+    }
+    div#nav{
+        margin-top: 0;
+    }
+    p>a{
+        font-size: 1em;
+    }
+    div.row nav ul li:hover ul.subNav{
+        display: none;
+    }
+}
+/*------------------------------------------------------------------*/
+
+/*Mobile Portrait Size to Mobile Landscape Size (devices and browsers)*/
+@media screen and  (max-width: 479px){
+    /*--------Global--------*/
+    button{
+        font-size: 1.6em;
+    }
+    .wrapper{
+        width: 100%;
+    }
+    /*----------------------*/
+    /*--------Navigation--------*/
+    nav ul{
+        margin: 0;
+    }
+    nav ul li{
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+    nav ul li:last-of-type{
+        margin: 0;
+        padding-right: 0;
+    }
+    nav ul li a{
+        width: 100%;
+        text-align: center;
+        min-height: 45px;
+        line-height: 45px;
+    }
+    nav ul li a p{
+        width: 100%;
+        text-align: center;
+        min-height: 45px;
+        line-height: 45px;
+        padding: 0;
+    }
+    /*----------------------*/
+    /*--------Fonts--------*/
+    h1,h2,h3,h4,h5,h6,p{
+        text-align: center;
+        margin: 0 auto;
+    }
+    /*----------------------*/
+    /*--------Columns--------*/
+    .column, .columns{
+        width: 100%;
+    }
+    /*----------------------*/
+    /*--------Rows--------*/
+   .row:first-of-type{
+        margin-top: 0;
+        padding-top: 0;
+    }
+    div.row img{
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+    div.four.columns:nth-of-type(2) img, div.four.columns:nth-of-type(3) img{
+
+    }
+    div#nav{
+        margin-top: 0;
+    }
+    .templar_form{
+        width: 100%;
+    }
+    .templar_form > label{
+        width: 16.6667%
+    }
+    .templar_form > input{
+        width: 60%;
+        float: left;
+     }
+    textarea.twelve.columns{
+        width: 64.770563%;
+        height: 85px;
+        max-height: 85px;
+        min-height: 85px;
+    }
+    #email_submit{
+        margin-left: 23.170732%;
+        margin-top: 30px;
+        width: 55.4%;
+    }
+    .row .four.columns img{
+        margin-top: 40px;
+        padding: 0;
+        width: 100%;
+    }
+    div.row div.four.columns img.secondRow{
+        margin-top: 40px;
+        padding: 0;
+        width: 100%;
+    }
+    div.row nav ul li:hover ul.subNav{
+        display: none;
+    }
+}
+    /*------Animations-------*/
+    /*----------------------*/
+/*------------------------------------------------------------------*/
+/*==================================================================================*/

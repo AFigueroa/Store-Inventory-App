@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ pagedata[0][0][1]}}</title>
+    <meta charset="utf-8">
+    <!--
+                               Page Specific Stylesheets
+    -->
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/styles.css') }}">
+    <!--
+                                  Templar Stylesheets
+    -->
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/templar.css') }}">
+    <!--
+                                      Font Styles
+    -->
+    <!--Name: "Lato" src=http://www.google.com/fonts#QuickUsePlace:quickUse/Family:Lato:400,300,100,700,900-->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    {% if session['logged'] != false %}
+<!--
+                                  Private Member Navigation
+    -->
+    <div class="row" id="nav">
+        <nav>
+            <ul>
+                <li><a href="/">ALL ITEMS</a></li>
+                <li><a href="/addform">ADD ITEM</a></li>
+                <li><a href="/logoutaction">LOGOUT</a></li>
+            </ul>
+        </nav>
+    </div>
+{% else %}
+<!--
+                                  Public Navigation
+    -->
+    <div class="row" id="nav">
+        <nav>
+            <ul>
+                <li><a href="/">ALL ITEMS</a></li>
+                <li><a href="/loginform">LOGIN</a></li>
+            </ul>
+        </nav>
+    </div>
+{% endif %}
+
+    <div class="wrapper">
+
+        <!--
+                                        Form Header
+        -->
+        <div class="row">
+            <div class="twelve columns">
+                <h1>{{ pagedata[0][0][1] }}</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="twelve columns">
+                 <ul>
+                    {% for item in pagedata[0] %}
+                    <li style="border:1px solid black">
+                        <div class="row" >
+                            <div class="twelve columns">
+                                <div class="row">
+                                    <p style="text-align:left"><strong>Description:</strong> {{item[2]}}</p> <br>
+                                </div>
+                                <div class="row">
+                                    <p style="text-align:left"><strong>Width:</strong> {{item[3]}} ft.</p> <br>
+                                </div>
+                                <div class="row">
+                                    <p style="text-align:left"><strong>Length:</strong> {{item[4]}} ft.</p> <br>
+                                </div>
+                                <div class="row">
+                                    <p style="text-align:left"><strong>Height:</strong> {{item[5]}} ft.</p> <br>
+                                </div>
+                                <div class="row">
+                                    <p style="text-align:left"><strong>Weight:</strong> {{item[6]}} pounds</p> <br>
+                                </div>
+                            </div>
+                        </div>
+                        {% if session['logged'] != 0 %}
+                        <div class="row">
+                            <div class="twelve columns">
+                                <div  style="margin:0 auto"class="row">
+                                    <p style="text-align:center"><a  href="/updateform/{{item[0]}}">UPDATE</a> |
+                                    <a href="/deleteaction/{{item[0]}}">DELETE</a></p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+
+                 </ul>
+            </div>
+        </div>
+        <div class="row">
+            {% for item in pagedata[1] %}
+            <div class="four columns">
+                <img class="fullsize" src="/{{item}}" alt="">
+                <h4>{{ pagedata[0][0][1] }}</h4>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

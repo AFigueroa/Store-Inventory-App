@@ -1,0 +1,125 @@
+/*
+           Color Palette
+*/
+/*
+    Night grey: #30302F
+    Dark grey: #575555
+    Warm grey: #C7C4C2
+    Creamy white: #FFFBF9
+    Egg: #F9F3EF;
+    Darkbark brown: #695848
+    Orange kick: #FF5933
+    Balance blue: #C2E3FF
+*/
+/*============================================*/
+/*
+           Color Scheme
+*/
+body{
+    background-color: #30302F;
+    color: #575555;
+}
+.wrapper{
+    background-color: #FFFBF9;
+}
+div#nav{
+    background-color: transparent;
+}
+nav ul{
+    background-color: #695848;
+}
+nav ul li p{
+    background-color: #575555;
+    color: #C2E3FF;
+}
+nav ul.subNav li a p{
+    background-color: #575555;
+    color: #C2E3FF;
+}
+nav ul li p:hover{
+    background-color: #FFFBF9;
+    color: #575555;
+}
+.subNav li a p:hover{
+    background-color: #C2E3FF;
+    color: #30302F;
+}
+a{
+    color: #FF703E;
+}
+a:hover{
+    color: #575555;
+}
+button{
+    background-color: #FF5933;
+    color: #FFFBF9;
+}
+input{
+    background-color: #C7C4C2;
+}
+input:focus{
+    background-color: #C2E3FF ;
+}
+textarea.twelve.columns{
+    background-color: #C7C4C2;
+}
+textarea:focus{
+    background-color: #C2E3FF;
+}
+button.free{
+    background-color: #96E5B1;
+}
+button:hover{
+    background-color: #575555 ;
+    color: #C2E3FF ;
+}
+/*===========================================*/
+/*
+           Page Styling
+*/
+div#nav{
+    margin-top: 15px;
+}
+
+#browse{
+    margin-top: 15px;
+}
+div.row div.four.columns th{
+    padding-top: 40px;
+}
+body>div.row:first-child{
+    padding-bottom: 0;
+}
+h1:first-of-type{
+    margin-bottom: 19px;
+}
+#share{
+    line-height: 35px;
+    font-size: 1.8em;
+    float: left;
+}
+.lineHeight{
+    line-height: 35px;
+}
+textarea.twelve.columns{
+    float:left;
+    overflow: hidden;
+    margin-top: 18px;
+    padding: 10px 0 0 1.6%;
+    width: 53.488372%;
+    min-height: 75px;
+}
+#email_submit{
+    margin-left: 11.2%;
+    margin-top: 30px;
+    width: 55.4%;
+}
+img[src="img/galley_01/sample_"]{
+    width: 20%;
+}
+
+
+.receipt{
+    font-size: 2.0em;
+    padding-left:5%;
+}

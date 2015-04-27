@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add Item</title>
+    <meta charset="utf-8">
+    <!--
+                               Page Specific Stylesheets
+    -->
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/styles.css') }}">
+    <!--
+                                  Templar Stylesheets
+    -->
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/templar.css') }}">
+    <!--
+                                      Font Styles
+    -->
+    <!--Name: "Lato" src=http://www.google.com/fonts#QuickUsePlace:quickUse/Family:Lato:400,300,100,700,900-->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <!--
+                                  Full size Navigation
+    -->
+    <div class="row" id="nav">
+        <nav>
+            <ul>
+                <li><a href="/">ALL ITEMS</a></li>
+                <li><a href="/logoutaction">LOGOUT</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!--
+                                        Wrapper 90%
+    -->
+    <div class="wrapper">
+
+        <!--
+                                        Form Header
+        -->
+        <div class="row">
+            <div class="twelve columns">
+                <h1>Add Item Form</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="twelve columns">
+                <p>{{pagedata}}</p>
+            </div>
+        </div>
+
+        <!--
+                                          Add Item Form
+        -->
+        <div class="row">
+            <form class="six columns templar_form" action="/addaction" method="post" enctype="multipart/form-data" >
+
+                <!--
+                                        Item Name
+                -->
+                <label class="clear_both three columns" for="name">Item name:</label>
+                <input class="three columns" name="name" type="text" maxlength="50" min="6" />
+
+                <!--
+                                        Description
+                -->
+                <label class="clear_both three columns" for="description">Description:</label>
+                <textarea class="three columns" name="description" type="text"  > Item description here</textarea>
+
+                <!--
+                                        Width
+                -->
+                <label class="clear_both three columns" for="width">Width:</label>
+                <input class="three columns" name="width" type="number" maxlength="10" placeholder="Input value as Meters"/>
+
+                <!--
+                                        Length
+                -->
+                <label class="clear_both three columns" for="length">Length:</label>
+                <input class="three columns" name="length" type="number" maxlength="10" placeholder="Input value as Meters"/>
+
+                <!--
+                                        Height
+                -->
+                <label class="clear_both three columns" for="height">Height:</label>
+                <input class="three columns" name="height" type="number" maxlength="10" placeholder="Input value as Meters"/>
+
+                <!--
+                                        Wheight
+                -->
+                <label class="clear_both three columns" for="weight">Weight:</label>
+                <input class="three columns" name="weight" type="number" maxlength="10" placeholder="Input value as Pounds"/>
+
+                <!--
+                                        Images
+                -->
+                <label class="clear_both three columns" for="images">Images:</label>
+                <input class="three columns" name="images[]" type="file" multiple="">
+
+
+                <!--
+                                         Submit
+                -->
+                <button class="two columns" id="email_submit" value="Upload">Submit</button>
+            </form>
+        </div>
+   </div>
+</body>
+</html>

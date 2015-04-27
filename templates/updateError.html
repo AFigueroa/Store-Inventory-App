@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Update Error</title>
+    <meta charset="utf-8">
+    <!--
+                               Page Specific Stylesheets
+    -->
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/styles.css') }}">
+    <!--
+                                  Templar Stylesheets
+    -->
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/templar.css') }}">
+    <!--
+                                      Font Styles
+    -->
+    <!--Name: "Lato" src=http://www.google.com/fonts#QuickUsePlace:quickUse/Family:Lato:400,300,100,700,900-->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+{% if session['logged'] != false %}
+    <!--
+                                  Private Member Navigation
+    -->
+    <div class="row" id="nav">
+        <nav>
+            <ul>
+                <li><a href="/">ALL ITEMS</a></li>
+                <li><a href="/addform">ADD ITEM</a></li>
+                <li><a href="/logoutaction">LOGOUT</a></li>
+            </ul>
+        </nav>
+    </div>
+{% else %}
+    <!--
+                                      Public Navigation
+    -->
+    <div class="row" id="nav">
+        <nav>
+            <ul>
+                <li><a href="/">ALL ITEMS</a></li>
+                <li><a href="/loginform">LOGIN</a></li>
+            </ul>
+        </nav>
+    </div>
+{% endif %}
+    <!--
+                                        Wrapper 90%
+    -->
+    <div class="wrapper">
+
+        <!--
+                                        Form Header
+        -->
+        <div class="row">
+            <div class="twelve columns">
+                <div class="row">
+                    <h1>Failed to update</h1>
+                    <p>Please try again. If error persist please contact your server administrator</p>
+                </div>
+                {% if pagedata %}
+                <div class="row">
+                    <p><strong>ERROR = {{pagedata[0]}}</strong></p>
+                </div>
+                <div class="row">
+                    <p><a href="updateform/{{pagedata[1]}}">TRY AGAIN</a></p>
+                </div>
+                {% endif %}
+
+            </div>
+        </div>
+   </div>
+</body>
+</html>
